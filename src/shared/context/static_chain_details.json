@@ -1,0 +1,34 @@
+{
+  "tx_volume": 0.0,
+  "fees_paid": 0.0,
+  "total_unbonding": "0.0",
+  "total_delegators": 0,
+  "total_bonded": 0.0,
+  "bond_rate": 0.0,
+  "total_accounts": 167000,
+  "swap_total": 0.0,
+  "inflation": 0.93,
+  "circulating_supply": 420000000000000,
+  "total_contracts": 0,
+  "avg_block_time": 6.36,
+  "staking_params": {
+    "community_tax": "0.020000000000000000",
+    "restake_period": "1000",
+    "base_proposer_reward": "0.010000000000000000",
+    "bonus_proposer_reward": "0.040000000000000000",
+    "terp_foundation_tax": "0.000000000000000000",
+    "withdraw_addr_enabled": true,
+    "minimum_restake_threshold": "0.000000000000000000",
+    "terp_foundation_address": "terp1qfpnat6kc99gsc3233cw6fq0s0fdv7cq06alqu"
+  },
+  "community_pool": [
+    {
+      "denom": "uterp",
+      "amount": ""
+    },
+    {
+      "denom": "uthiol",
+      "amount": ""
+    }
+  ]
+}

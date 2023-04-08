@@ -41,13 +41,7 @@ export const DefaultLayout = ({ children }: any) => {
     <>
       {/* Fixed Feedback Button */}
       <FeedbackButton
-        url={"https://github.com/scrtlabs/dash.scrt.network/issues/new"}
-      />
-
-      {/* Fixed Help Button */}
-      <FloatingCTAButton
-        url="https://linktr.ee/SCRTSupport"
-        text="Need Help?"
+        url={"https://github.com/terpnetwork/dash.terp.network/issues"}
       />
 
       <div className="flex">

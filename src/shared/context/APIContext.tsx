@@ -59,28 +59,28 @@ const APIContextProvider = ({ children }: any) => {
 
   useEffect(() => {
     // Coingecko API
-    let coingeckoApiUrl_Day = `https://api.coingecko.com/api/v3/coins/secret/market_chart?vs_currency=usd&days=1`;
+    let coingeckoApiUrl_Day = ``;
     fetch(coingeckoApiUrl_Day)
       .then((response) => response.json())
       .then((response) => {
         setCoinGeckoApiData_Day(response);
       });
 
-    let coingeckoApiUrl_Month = `https://api.coingecko.com/api/v3/coins/secret/market_chart?vs_currency=usd&days=30`;
+    let coingeckoApiUrl_Month = ``;
     fetch(coingeckoApiUrl_Month)
       .then((response) => response.json())
       .then((response) => {
         setCoinGeckoApiData_Month(response);
       });
 
-    let coingeckoApiUrl_Year = `https://api.coingecko.com/api/v3/coins/secret/market_chart?vs_currency=usd&days=365`;
+    let coingeckoApiUrl_Year = ``;
     fetch(coingeckoApiUrl_Year)
       .then((response) => response.json())
       .then((response) => {
         setCoinGeckoApiData_Year(response);
       });
 
-    let defiLamaApiUrl_Year = `https://api.llama.fi/charts/secret`;
+    let defiLamaApiUrl_Year = ``;
     fetch(defiLamaApiUrl_Year)
       .then((response) => response.json())
       .then((response) => {
@@ -93,7 +93,7 @@ const APIContextProvider = ({ children }: any) => {
       });
 
     //  API
-    let spartanApiUrl = `https://core.spartanapi.dev/secret/chains/secret-4/chain_info`;
+    let spartanApiUrl = `'./static_chain_details.json'`;
     fetch(spartanApiUrl)
       .then((response) => response.json())
       .then((response) => {
@@ -101,7 +101,7 @@ const APIContextProvider = ({ children }: any) => {
       });
 
     // Coingecko Market Price, Market Cap & Volume
-    let coingeckoMarketCapVolumeUrl = `https://api.coingecko.com/api/v3/simple/price?ids=secret&vs_currencies=USD&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true`;
+    let coingeckoMarketCapVolumeUrl = "static_market_cap.json";
     fetch(coingeckoMarketCapVolumeUrl)
       .then((response) => response.json())
       .then((response) => {

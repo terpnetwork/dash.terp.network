@@ -254,6 +254,20 @@ export const chains: { [chain_name: string]: Chain } = {
     chain_image: "/stride.svg",
     explorer_account: "https://www.mintscan.io/stride/account/",
   },
+  TerpNetwork: {
+    chain_name: "Terp  Network",
+    deposit_channel_id: "",
+    deposit_gas: 150_000,
+    deposit_gas_denom: "uthiol",
+    withdraw_channel_id: "",
+    withdraw_gas: 30_000,
+    chain_id: "morocco-1",
+    bech32_prefix: "terp",
+    lcd: "",
+    rpc: "",
+    chain_image: "/terp.png",
+    explorer_account: "",
+  },
   Terra: {
     chain_name: "Terra",
     deposit_channel_id: "channel-3",
@@ -276,7 +290,7 @@ export type Token = {
   /** a snip20 token that's originated from Secret Network */
   is_snip20?: boolean;
   /** secret contract address of the token */
-  address: string;
+  address?: string;
   /** secret contract code hash of the token */
   code_hash: string;
   /** logo of the token */
@@ -1166,6 +1180,60 @@ export const tokens: Token[] = [
       },
     ],
   },
+  {
+    name: "TERP",
+    code_hash: "",
+    image: "/terp.png",
+    decimals: 6,
+    coingecko_id: "terp",
+    deposits: [
+      {
+        chain_name: "TerpNetwork",
+        from_denom: "uterp",
+      },
+    ],
+    withdrawals: [
+      {
+        chain_name: "TerpNetwork",
+        from_denom: ibcDenom(
+          [
+            {
+              incomingChannelId: chains["TerpNetwork"].withdraw_channel_id,
+              incomingPortId: "transfer",
+            },
+          ],
+          "uterp"
+        ),
+      },
+    ],
+  },
+  {
+    name: "THIOL",
+    code_hash: "",
+    image: "/thiol.png",
+    decimals: 6,
+    coingecko_id: "thiol",
+    deposits: [
+      {
+        chain_name: "TerpNetwork",
+        from_denom: "uthiol",
+      },
+    ],
+    withdrawals: [
+      {
+        chain_name: "TerpNetwork",
+        from_denom: ibcDenom(
+          [
+            {
+              incomingChannelId: chains["TerpNetwork"].withdraw_channel_id,
+              incomingPortId: "transfer",
+            },
+          ],
+          "uthiol"
+        ),
+      },
+    ],
+  },
 ];
 
 // These are snip 20 tokens that are IBC compatible (no need to wrap them manually)
@@ -1529,3 +1597,7 @@ export const snips: Token[] = [
 export const SECRET_CHAIN_ID = chains["Secret Network"].chain_id;
 export const SECRET_LCD = chains["Secret Network"].lcd;
 export const SECRET_RPC = chains["Secret Network"].rpc;
+
+export const TERP_NETWORK_CHAIN_ID = chains["TerpNetwork"].chain_id;
+export const TERP_LCD = chains["TerpNetwork"].lcd;
+export const TERP_RPC = chains["TerpNetwork"].rpc;

@@ -10,7 +10,8 @@ export const faucetURL = "https://faucet.secretsaturn.net/claim";
 export const faucetAddress = "secret1tq6y8waegggp4fv2fcxk3zmpsmlfadyc7lsd69";
 
 export const dAppsURL =
-  "https://secretadmin.scrt.network/api/ecosystem-dapps?populate=deep&pagination[pageSize]=1000";
+  // TODO - Create terpnet ecosystem-dapp api
+  "";
 
 export const sleep = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
@@ -22,6 +23,17 @@ export function gasToFee(gas: number, denom: string): StdFee {
       {
         amount: String(Math.floor(gas * gasPriceUscrt) + 1),
         denom: denom ? denom : "uscrt",
+      },
+    ],
+    gas: String(gas),
+  };
+}
+export function TerpgasToFee(gas: number, denom: string): StdFee {
+  return {
+    amount: [
+      {
+        amount: String(Math.floor(gas * gasPriceUscrt) + 1),
+        denom: denom ? denom : "uthiol",
       },
     ],
     gas: String(gas),
@@ -233,6 +245,52 @@ export async function suggestChihuahuaToKeplr(keplr: Keplr) {
   });
 }
 
+export async function suggestTerpNetworkToKeplr(keplr: Keplr) {
+  await keplr.experimentalSuggestChain({
+    rpc: "",
+    rest: "",
+    chainId: "morocco-1",
+    chainName: "Terp Network",
+    stakeCurrency: {
+      coinDenom: "TERP",
+      coinMinimalDenom: "uterp",
+      coinDecimals: 6,
+      coinGeckoId: "terp",
+    },
+    bip44: {
+      coinType: 118,
+    },
+    bech32Config: Bech32Address.defaultBech32Config("TerpNetwork"),
+    currencies: [
+      {
+        coinDenom: "TERP",
+        coinMinimalDenom: "uterp",
+        coinDecimals: 6,
+        coinGeckoId: "terp",
+      },
+      {
+        coinDenom: "THIOL",
+        coinMinimalDenom: "uthiol",
+        coinDecimals: 6,
+        coinGeckoId: "terp",
+      },
+    ],
+    feeCurrencies: [
+      {
+        coinDenom: "THIOL",
+        coinMinimalDenom: "uthiol",
+        coinDecimals: 6,
+        coinGeckoId: "thiol",
+        gasPriceStep: {
+          low: 0.025,
+          average: 0.03,
+          high: 0.035,
+        },
+      },
+    ],
+    features: ["stargate", "ibc-transfer", "no-legacy-stdTx", "ibc-go"],
+  });
+}
 export const usdString = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",

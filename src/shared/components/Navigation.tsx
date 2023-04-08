@@ -117,7 +117,7 @@ export function Navigation({
         </li>
         <li>
           <NavLink
-            to="/restake"
+            to="https://explorer.kjnodes.com/terp-testnet/gov"
             className={({ isActive }) =>
               isActive
                 ? "text-black dark:text-white bg-gradient-to-r from-neutral-200 via-neutral-200 to-neutral-200/10 dark:from-neutral-700 dark:via-neutral-700 dark:to-neutral-700/10 block w-full px-8 py-3 rounded-xl transition-colors font-bold cursor-default"
@@ -125,7 +125,7 @@ export function Navigation({
             }
           >
             <FontAwesomeIcon icon={faRecycle} className="mr-2" />
-            <span>Auto Restake</span>
+            <span>Governance</span>
           </NavLink>
         </li>
         {/* <li>
@@ -197,7 +197,7 @@ export function Navigation({
             </li>
             <li>
               <a
-                href="https://wallet.keplr.app/chains/secret-network?tab=governance"
+                href="https://explorer.kjnodes.com/terp-testnet/gov"
                 target="_blank"
                 className="cursor-pointer dark:hover:text-white w-full lg:mx-8 rounded-xl transition-colors text-neutral-600 dark:text-neutral-300 hover:text-black block lg:flex lg:items-center"
               >
@@ -212,12 +212,12 @@ export function Navigation({
             </li>
             <li>
               <a
-                href="https://secretanalytics.xyz"
+                href="https://terp.network"
                 target="_blank"
                 className="cursor-pointer dark:hover:text-white w-full lg:mx-8 rounded-xl transition-colors text-neutral-600 dark:text-neutral-300 hover:text-black block lg:flex lg:items-center"
               >
                 <FontAwesomeIcon icon={faChartLine} className="mr-2" />
-                <span>Stats</span>
+                <span>Stats (Soon)</span>
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
                   className="text-xs ml-2"
@@ -227,7 +227,7 @@ export function Navigation({
             </li>
             <li>
               <a
-                href="https://secretnodes.com/"
+                href="https://terp.zenscan.io/"
                 target="_blank"
                 className="cursor-pointer dark:hover:text-white w-full lg:mx-8 rounded-xl transition-colors text-neutral-600 dark:text-neutral-300 hover:text-black block lg:flex lg:items-center"
               >
@@ -242,7 +242,7 @@ export function Navigation({
             </li>
             <li>
               <a
-                href="https://docs.scrt.network/"
+                href="https://docs.terp.network/"
                 target="_blank"
                 className="cursor-pointer dark:hover:text-white w-full lg:mx-8 rounded-xl transition-colors text-neutral-600 dark:text-neutral-300 hover:text-black block lg:flex lg:items-center"
               >

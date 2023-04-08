@@ -19,11 +19,25 @@ class Footer extends React.Component {
           <div className="col-span-12 text-sm text-neutral-600 dark:text-neutral-400 font-medium">
             {"⚡️ Powered by "}
             <a
+              href="https://terp.network/"
+              target="_blank"
+              className="transition-colors hover:text-black dark:hover:text-white font-bold"
+            >
+              Terp Network
+            </a>
+            <a
               href="https://scrt.network/"
               target="_blank"
               className="transition-colors hover:text-black dark:hover:text-white font-bold"
             >
-              Secret Network
+              , Secret Network
+            </a>
+            <a
+              href="https://akash.network/"
+              target="_blank"
+              className="transition-colors hover:text-black dark:hover:text-white font-bold"
+            >
+              , & Akash Network
             </a>
           </div>
           <div className="col-span-12 text-xs font-medium text-neutral-600 dark:text-neutral-400">
@@ -43,56 +57,50 @@ class Footer extends React.Component {
             >
               Secret Saturn
             </a>
+            {", "}
+            <a
+              href="https://permissionless.terp.network/"
+              target="_blank"
+              className="transition-colors hover:text-black dark:hover:text-white"
+            >
+              The Permissionless Web Team
+            </a>
           </div>
           <div className="col-span-12 space-x-4 text-xl text-center">
             <a
               className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://forum.scrt.network/"
+              href="https://forum.terp.network/"
               target="_blank"
             >
               <FontAwesomeIcon icon={faComments} />
             </a>
             <a
               className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://github.com/SecretFoundation"
+              href="https://github.com/terpnetwork"
               target="_blank"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://discord.com/invite/SJK32GY"
+              href="https://discord.gg/9mFZc4XEDA"
               target="_blank"
             >
               <FontAwesomeIcon icon={faDiscord} />
             </a>
             <a
               className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://t.me/SCRTcommunity"
+              href="https://t.me/+FuFi63JcwuEzNmVh"
               target="_blank"
             >
               <FontAwesomeIcon icon={faTelegram} />
             </a>
             <a
               className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://twitter.com/SecretNetwork"
+              href="https://twitter.com/terpculture"
               target="_blank"
             >
               <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a
-              className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://www.instagram.com/scrtnetwork/"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
-              href="https://www.youtube.com/channel/UCZPqj7h7mzjwuSfw_UWxQPw"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>
         </div>
