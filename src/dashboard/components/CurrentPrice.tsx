@@ -35,11 +35,11 @@ class CurrentPrice extends React.Component<ICurrentPriceProps> {
         </div>
         <div className="flex-1 text-right">
           <a
-            href="https://scrt.network/about/get-scrt#buy-scrt"
+            href="https://terp.network"
             target="_blank"
             className="w-full md:w-auto md:px-4 inline-block bg-cyan-500 dark:bg-cyan-500/20 text-white dark:text-cyan-200 dark:hover:text-cyan-100 hover:bg-cyan-400 dark:hover:bg-cyan-500/50 text-center transition-colors py-2.5 rounded-xl font-semibold text-sm"
           >
-            Get SCRT
+            Get TERP
             <FontAwesomeIcon
               icon={faArrowUpRightFromSquare}
               className="text-xs ml-2"

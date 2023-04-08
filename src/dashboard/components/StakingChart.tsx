@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { formatNumber } from "shared/utils/commons";
-import { SECRET_LCD, SECRET_CHAIN_ID } from "shared/utils/config";
+import { TERP_LCD, TERP_NETWORK_CHAIN_ID } from "shared/utils/config";
 
 import {
   Chart as ChartJS,
@@ -42,8 +42,8 @@ export default function StakingChart() {
   useEffect(() => {
     const queryData = async () => {
       const secretjsquery = new SecretNetworkClient({
-        url: SECRET_LCD,
-        chainId: SECRET_CHAIN_ID,
+        url: TERP_LCD,
+        chainId: TERP_NETWORK_CHAIN_ID,
       });
       secretjsquery?.query?.distribution
         ?.communityPool("")
@@ -51,7 +51,7 @@ export default function StakingChart() {
           setCommunityPool(Math.floor((res.pool[1] as any).amount / 10e5))
         );
       secretjsquery?.query?.bank
-        ?.supplyOf({ denom: "uscrt" })
+        ?.supplyOf({ denom: "uterp" })
         ?.then((res) => setTotalSupply((res.amount.amount as any) / 1e6));
       secretjsquery?.query?.staking?.pool("")?.then((res) => setPool(res.pool));
     };
@@ -183,11 +183,11 @@ export default function StakingChart() {
         </div>
 
         <a
-          href="https://wallet.keplr.app/chains/secret-network"
+          href="https://stake-terp.zenchainlabs.io/stake"
           target="_blank"
           className="block bg-cyan-500 dark:bg-cyan-500/20 text-white dark:text-cyan-200 dark:hover:text-cyan-100 hover:bg-cyan-400 dark:hover:bg-cyan-500/50 w-full text-center transition-colors py-2.5 rounded-xl mt-4 font-semibold text-sm"
         >
-          Stake SCRT
+          Stake TERP
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
             className="text-xs ml-2"
