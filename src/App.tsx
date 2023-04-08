@@ -23,7 +23,7 @@ import { APIContextProvider } from "shared/context/APIContext";
 import RestakeRedesign from "stake/RestakeRedesign";
 
 // for html-head
-export const websiteName = "Secret Dashboard";
+export const websiteName = "Terp Dashboard";
 
 globalThis.Buffer = Buffer;
 declare global {
