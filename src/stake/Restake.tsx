@@ -185,7 +185,7 @@ export function Restake() {
   return (
     <>
       <Helmet>
-        <title>Secret Dashboard | Auto-Restake</title>
+        <title>Terp Dashboard | Auto-Restake</title>
       </Helmet>
 
       <div className="w-full max-w-xl mx-auto px-4 onEnter_fadeInDown relative">
@@ -201,7 +201,7 @@ export function Restake() {
           {/* Header */}
           <div className="flex items-center mb-4">
             <h1 className="inline text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">
-              Auto Restake
+              Select a Validator to Stake
             </h1>
             <Tooltip
               title={
@@ -225,7 +225,7 @@ export function Restake() {
                     icon={faTriangleExclamation}
                     className="mr-2"
                   />
-                  {`You do not have any SCRT staked`}
+                  {`You do not have any TERP staked`}
                 </div>
               </div>
 
@@ -233,11 +233,11 @@ export function Restake() {
                 <ul className="list-disc pl-4 space-y-1">
                   <li>
                     <a
-                      href="https://scrt.network/about/get-scrt#buy-scrt"
+                      href="https://terp.network"
                       target="_blank"
                       className="text-neutral-300 border-b border-transparent hover:border-inherit transition-colors"
                     >
-                      {`Get SCRT`}
+                      {`Get TERP`}
                       <FontAwesomeIcon
                         icon={faArrowUpRightFromSquare}
                         className="text-xs ml-2"
@@ -286,7 +286,7 @@ export function Restake() {
                             validator.operator_address ==
                             item?.delegation?.validator_address
                         )?.description?.moniker
-                      } (${(item.balance.amount * 1e-6).toFixed(1)} SCRT): ${
+                      } (${(item.balance.amount * 1e-6).toFixed(1)} TERP): ${
                         restakeEntries?.validators.find(
                           (validator: any) =>
                             validator == item?.delegation?.validator_address

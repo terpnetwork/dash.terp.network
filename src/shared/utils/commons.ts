@@ -247,8 +247,8 @@ export async function suggestChihuahuaToKeplr(keplr: Keplr) {
 
 export async function suggestTerpNetworkToKeplr(keplr: Keplr) {
   await keplr.experimentalSuggestChain({
-    rpc: "",
-    rest: "",
+    rpc: "https://rpc-terp.zenchainlabs.io",
+    rest: "https://api-terp.zenchainlabs.io",
     chainId: "morocco-1",
     chainName: "Terp Network",
     stakeCurrency: {
@@ -260,7 +260,7 @@ export async function suggestTerpNetworkToKeplr(keplr: Keplr) {
     bip44: {
       coinType: 118,
     },
-    bech32Config: Bech32Address.defaultBech32Config("TerpNetwork"),
+    bech32Config: Bech32Address.defaultBech32Config("Terp Network"),
     currencies: [
       {
         coinDenom: "TERP",

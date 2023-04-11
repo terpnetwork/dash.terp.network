@@ -96,7 +96,7 @@ function Deposit() {
         <>
           <Select
             options={
-              tokens.filter((token) => token.name === "SCRT")[0].deposits
+              tokens.filter((token) => token.name === "TERP")[0].deposits
             }
             value={selectedSource}
             onChange={setSelectedSource}
@@ -105,7 +105,7 @@ function Deposit() {
             formatOptionLabel={(option) => (
               <div className="flex items-center">
                 <img
-                  src={`/img/assets/${chains[option.chain_name].chain_image}`}
+                  src={`https://raw.githubusercontent.com/terpnetwork/chain-registry/master/terpnetwork/images/terp.png`}
                   className="w-6 h-6 mr-2 rounded-full"
                 />
                 <span className="font-semibold text-sm">
@@ -190,7 +190,7 @@ function Deposit() {
     }
   };
 
-  const targetChain = chains["Secret Network"];
+  const targetChain = chains["Terp Network"];
 
   const fetchSourceBalance = async (newAddress: String | null) => {
     if (secretjs && secretAddress) {
@@ -1162,7 +1162,7 @@ function Deposit() {
           )}
         </div>
       </div>
-
+s
       <div className="mt-4">
         <SubmitButton />
       </div>

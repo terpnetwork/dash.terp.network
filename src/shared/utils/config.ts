@@ -254,7 +254,7 @@ export const chains: { [chain_name: string]: Chain } = {
     chain_image: "/stride.svg",
     explorer_account: "https://www.mintscan.io/stride/account/",
   },
-  TerpNetwork: {
+  "Terp Network": {
     chain_name: "Terp  Network",
     deposit_channel_id: "",
     deposit_gas: 150_000,
@@ -263,8 +263,8 @@ export const chains: { [chain_name: string]: Chain } = {
     withdraw_gas: 30_000,
     chain_id: "morocco-1",
     bech32_prefix: "terp",
-    lcd: "",
-    rpc: "",
+    lcd: "https://api-terp.zenchainlabs.io",
+    rpc: "https://rpc-terp.zenchainlabs.io",
     chain_image: "/terp.png",
     explorer_account: "",
   },
@@ -1188,17 +1188,17 @@ export const tokens: Token[] = [
     coingecko_id: "terp",
     deposits: [
       {
-        chain_name: "TerpNetwork",
+        chain_name: "Terp Network",
         from_denom: "uterp",
       },
     ],
     withdrawals: [
       {
-        chain_name: "TerpNetwork",
+        chain_name: "Terp Network",
         from_denom: ibcDenom(
           [
             {
-              incomingChannelId: chains["TerpNetwork"].withdraw_channel_id,
+              incomingChannelId: chains["Terp Network"].withdraw_channel_id,
               incomingPortId: "transfer",
             },
           ],
@@ -1215,17 +1215,17 @@ export const tokens: Token[] = [
     coingecko_id: "thiol",
     deposits: [
       {
-        chain_name: "TerpNetwork",
+        chain_name: "Terp Network",
         from_denom: "uthiol",
       },
     ],
     withdrawals: [
       {
-        chain_name: "TerpNetwork",
+        chain_name: "Terp Network",
         from_denom: ibcDenom(
           [
             {
-              incomingChannelId: chains["TerpNetwork"].withdraw_channel_id,
+              incomingChannelId: chains["Terp Network"].withdraw_channel_id,
               incomingPortId: "transfer",
             },
           ],
@@ -1598,6 +1598,6 @@ export const SECRET_CHAIN_ID = chains["Secret Network"].chain_id;
 export const SECRET_LCD = chains["Secret Network"].lcd;
 export const SECRET_RPC = chains["Secret Network"].rpc;
 
-export const TERP_NETWORK_CHAIN_ID = chains["TerpNetwork"].chain_id;
-export const TERP_LCD = chains["TerpNetwork"].lcd;
-export const TERP_RPC = chains["TerpNetwork"].rpc;
+export const TERP_NETWORK_CHAIN_ID = chains["Terp Network"].chain_id;
+export const TERP_LCD = chains["Terp Network"].lcd;
+export const TERP_RPC = chains["Terp Network"].rpc;

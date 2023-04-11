@@ -59,28 +59,28 @@ const APIContextProvider = ({ children }: any) => {
 
   useEffect(() => {
     // Coingecko API
-    let coingeckoApiUrl_Day = ``;
+    let coingeckoApiUrl_Day = `https://api.coingecko.com/api/v3/coins/secret/market_chart?vs_currency=usd&days=1`;
     fetch(coingeckoApiUrl_Day)
       .then((response) => response.json())
       .then((response) => {
         setCoinGeckoApiData_Day(response);
       });
 
-    let coingeckoApiUrl_Month = ``;
+    let coingeckoApiUrl_Month = `https://api.coingecko.com/api/v3/coins/secret/market_chart?vs_currency=usd&days=30`;
     fetch(coingeckoApiUrl_Month)
       .then((response) => response.json())
       .then((response) => {
         setCoinGeckoApiData_Month(response);
       });
 
-    let coingeckoApiUrl_Year = ``;
+    let coingeckoApiUrl_Year = `https://api.coingecko.com/api/v3/coins/secret/market_chart?vs_currency=usd&days=365`;
     fetch(coingeckoApiUrl_Year)
       .then((response) => response.json())
       .then((response) => {
         setCoinGeckoApiData_Year(response);
       });
 
-    let defiLamaApiUrl_Year = ``;
+    let defiLamaApiUrl_Year = `https://api.llama.fi/charts/secret`;
     fetch(defiLamaApiUrl_Year)
       .then((response) => response.json())
       .then((response) => {
@@ -93,7 +93,7 @@ const APIContextProvider = ({ children }: any) => {
       });
 
     //  API
-    let spartanApiUrl = `'./static_chain_details.json'`;
+    let spartanApiUrl = ``;
     fetch(spartanApiUrl)
       .then((response) => response.json())
       .then((response) => {
@@ -101,7 +101,7 @@ const APIContextProvider = ({ children }: any) => {
       });
 
     // Coingecko Market Price, Market Cap & Volume
-    let coingeckoMarketCapVolumeUrl = "static_market_cap.json";
+    let coingeckoMarketCapVolumeUrl = ``;
     fetch(coingeckoMarketCapVolumeUrl)
       .then((response) => response.json())
       .then((response) => {
